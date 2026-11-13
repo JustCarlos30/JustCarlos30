@@ -14,6 +14,12 @@ must(/software engineer/i.test(readme), "bio must say Software Engineer");
 must(/5\+? years/i.test(readme), "bio must mention 5 years of experience");
 must(/\bAI\b/.test(readme), "bio must mention AI");
 
+// Day job + tools
+must(/\bAlbo\b/.test(readme), "must mention working at Albo");
+must(/fintech/i.test(readme), "must mention fintech");
+must(/\bClaude\b/.test(readme), "must mention Claude");
+must(/\bCodex\b/.test(readme), "must mention Codex");
+
 // Public repos being built
 for (const repo of ["taller-videos", "skills-videos-cortos"]) {
   must(readme.includes(`github.com/JustCarlos30/${repo}`), `must link public repo ${repo}`);
@@ -39,7 +45,8 @@ if (existsSync("assets/header.svg")) {
   must(svg.includes('xmlns="http://www.w3.org/2000/svg"'), "header.svg needs xmlns");
   must(!/<script/i.test(svg), "header.svg must not contain <script> (GitHub strips it)");
   must(!/https?:\/\/(?!www\.w3\.org)/.test(svg), "header.svg must not load external resources");
-  must(!/gengar|pokemon|pokémon/i.test(svg), "header.svg must not reference third-party IP");
+  must(!/gengar|pokemon|pokémon|astroworld|utopia|damn\.|parental advisory/i.test(svg), "header.svg must not reference third-party IP");
+  must(/feTurbulence/.test(svg), "header.svg needs film grain (feTurbulence) for the album-cover texture");
 }
 
 if (fail.length) {

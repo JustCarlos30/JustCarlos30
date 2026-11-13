@@ -1,28 +1,24 @@
 <p align="center">
-  <img src="assets/header.svg" alt="Carlos Jarero — Software Engineer · AI · Building things that haunt the web. An original purple phantom drifts through a starry night." width="1200" />
+  <img src="assets/header.svg" alt="Carlos Jarero — Vol. 1. Distressed bone-white lettering, purple and red smoke, and an original torn-sheet ghost on a near-black field." width="1200" />
 </p>
 
-## About
+I'm Carlos Jarero, a Software Engineer with 5 years of experience.  
+I work at Albo, a fintech in Mexico. I'm into AI and building things.  
+I'm a Claude lover and a Codex fan.
 
-I'm **Carlos Jarero**, a **Software Engineer with 5 years of experience**. I love AI, creating things, and turning curious ideas into useful tools—with a little mischief along the way.
+## TRACKLIST
 
-## What I'm building
+01. [taller-videos — 3:41](https://github.com/JustCarlos30/taller-videos)  
+    A local short-video workshop with Remotion, Docker and Whisper voice. No API keys or paid services.
+02. [skills-videos-cortos — 4:08](https://github.com/JustCarlos30/skills-videos-cortos)  
+    Spanish skills for AI agents: script critique, Whisper voice, Remotion motion, sound, and a modular content creator.
+03. [JustCarlos30 (Intro) — 1:12](https://github.com/JustCarlos30)  
+    The profile. Start here.
 
-| Project | What's taking shape |
-| :--- | :--- |
-| [**taller-videos**](https://github.com/JustCarlos30/taller-videos) | A local workshop for short videos with **Remotion, Docker, and Whisper voice**. No API keys or paid services required. |
-| [**skills-videos-cortos**](https://github.com/JustCarlos30/skills-videos-cortos) | Skills for **AI agents**: script critique, Whisper voice, Remotion motion, sound, and a modular content creator. |
+## CREDITS
 
-## Stack
+Day job: Albo — fintech  
+Featuring: Claude, Codex  
+Produced with: JavaScript, TypeScript, Python, Node.js, Docker, Remotion
 
-<p>
-  <img src="https://img.shields.io/badge/JavaScript-6b3fa0?style=flat-square&amp;logo=javascript&amp;logoColor=white" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-6b3fa0?style=flat-square&amp;logo=typescript&amp;logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Python-6b3fa0?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Node.js-6b3fa0?style=flat-square&amp;logo=nodedotjs&amp;logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Docker-6b3fa0?style=flat-square&amp;logo=docker&amp;logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Remotion-6b3fa0?style=flat-square&amp;logo=remotion&amp;logoColor=white" alt="Remotion" />
-  <img src="https://img.shields.io/badge/AI_agents-6b3fa0?style=flat-square&amp;logoColor=white" alt="AI agents" />
-</p>
-
-*Stay curious. Ship something hauntingly good.*
+More work to follow.

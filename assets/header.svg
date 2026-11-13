@@ -1,92 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title description">
-  <title id="title">Carlos Jarero — Software Engineer · AI</title>
-  <desc id="description">Building things that haunt the web. An original mischievous purple phantom with glowing magenta eyes and a sly grin floats over a dark, starry landscape.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title description">
+  <title id="title">Carlos Jarero — Vol. 1</title>
+  <desc id="description">An original release sleeve: oversized bone-white type with red print misregistration, purple and blood-red smoke, film grain, and a tall, torn-sheet ghost cropped by the top edge. An angled EXPLICIT CODE sticker sits at the bottom right.</desc>
   <defs>
-    <linearGradient id="night" x2="1" y2="1">
-      <stop stop-color="#0d0a14" />
-      <stop offset="1" stop-color="#1a1025" />
-    </linearGradient>
-    <radialGradient id="halo">
-      <stop stop-color="#6b3fa0" stop-opacity=".32" />
-      <stop offset="1" stop-color="#6b3fa0" stop-opacity="0" />
-    </radialGradient>
-    <linearGradient id="cloak" x1="0" y1="0" x2=".8" y2="1">
-      <stop stop-color="#c9a6ff" />
-      <stop offset=".38" stop-color="#9d6bdc" />
-      <stop offset="1" stop-color="#6b3fa0" />
-    </linearGradient>
-    <linearGradient id="hem" x2="0" y2="1">
-      <stop stop-color="#9d6bdc" stop-opacity=".65" />
-      <stop offset="1" stop-color="#9d6bdc" stop-opacity="0" />
-    </linearGradient>
-    <filter id="eye-glow" x="-80%" y="-100%" width="260%" height="300%">
-      <feGaussianBlur stdDeviation="4" />
-    </filter>
     <clipPath id="frame">
-      <rect width="1200" height="300" rx="20" />
+      <rect width="1200" height="420" />
     </clipPath>
+    <filter id="smoke" x="-40%" y="-60%" width="180%" height="220%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".009 .018" numOctaves="3" seed="18" result="haze" />
+      <feDisplacementMap in="SourceGraphic" in2="haze" scale="100" xChannelSelector="R" yChannelSelector="G" />
+      <feGaussianBlur stdDeviation="27" />
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".79" numOctaves="3" seed="30" />
+      <feColorMatrix type="matrix" values="0 0 0 0 .82  0 0 0 0 .78  0 0 0 0 .71  0 0 0 .32 0" />
+    </filter>
+    <filter id="torn-edge" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency=".055" numOctaves="2" seed="9" result="paper" />
+      <feDisplacementMap in="SourceGraphic" in2="paper" scale="5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
   </defs>
-  <style>
-    .phantom { animation: drift 7s ease-in-out infinite; }
-    .wisp { animation: fade 6s ease-in-out infinite; }
-    .late { animation-delay: -3s; }
-    @keyframes drift {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-9px); }
-    }
-    @keyframes fade {
-      0%, 100% { opacity: .25; }
-      50% { opacity: .75; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .phantom, .wisp { animation: none; }
-    }
-  </style>
   <g clip-path="url(#frame)">
-    <rect width="1200" height="300" fill="url(#night)" />
-    <ellipse cx="987" cy="135" rx="250" ry="210" fill="url(#halo)" />
-    <path d="M0 268 Q180 220 360 272 T730 269 T1200 247 V300 H0Z" fill="#6b3fa0" opacity=".07" />
-    <path d="M0 284 Q230 252 450 284 T880 278 T1200 274" fill="none" stroke="#9d6bdc" stroke-opacity=".15" />
-    <g fill="#c9a6ff">
-      <circle cx="52" cy="48" r="1.5" opacity=".4" />
-      <circle cx="417" cy="35" r="1" opacity=".35" />
-      <circle cx="748" cy="61" r="1.5" opacity=".5" />
-      <circle cx="1113" cy="47" r="1.5" opacity=".5" />
-      <circle cx="1154" cy="211" r="1" opacity=".4" />
-      <circle cx="813" cy="248" r="1" opacity=".45" />
-      <circle cx="630" cy="253" r="1" opacity=".3" />
+    <rect width="1200" height="420" fill="#0b0a0d" />
+
+    <!-- Diffuse ink clouds, without reflective or glossy surfaces. -->
+    <g filter="url(#smoke)" opacity=".8">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -16 7; 0 0" dur="28s" repeatCount="indefinite" />
+      <path d="M390 280 C520 90 630 315 768 102 S1050 30 1190 113" fill="none" stroke="#4b1d6b" stroke-width="145" />
+      <path d="M690 435 C790 285 945 380 1020 229 S1185 154 1280 205" fill="none" stroke="#8a1414" stroke-width="105" />
+      <path d="M720 214 C867 70 976 266 1175 15" fill="none" stroke="#4b1d6b" stroke-width="45" />
     </g>
-    <g class="wisp" fill="none" stroke="#c9a6ff" stroke-linecap="round">
-      <path d="M844 86 v12 m-6-6 h12" />
-      <path d="M1120 144 v8 m-4-4 h8" />
+
+    <!-- An elongated, asymmetrical sheet: no limbs, spikes, or round torso. -->
+    <g filter="url(#torn-edge)">
+      <path d="M930-52 C1018-75 1091-19 1099 60 L1110 143 1126 228 1153 302 1118 278 1131 364 1095 328 1101 405 1075 374 1061 444 1042 424 1032 336 1012 372 1009 296 980 330 987 254 960 277 967 196 942 230 950 139 C929 81 905 18 930-52Z" fill="#b6afa4" />
+      <path d="M964-18 L989 46 979 136 994 192 974 241 987 153 966 103Z M1068 64 L1055 177 1080 284 1061 232 1044 174Z M1026 223 L1042 292 1032 336 1032 285Z" fill="#0b0a0d" opacity=".6" />
+      <path d="M972 83 L1008 103 997 121 976 114Z M1038 97 L1070 72 1063 107 1040 119Z" fill="#0b0a0d" />
+      <path d="M1018 140 L1028 135 1024 181 1015 193Z" fill="#0b0a0d" />
+      <path d="M1097 211 L1105 254 M1000 23 L1010 60 M1057 307 L1065 337" stroke="#ece6da" stroke-width="2" opacity=".35" />
     </g>
-    <g class="wisp late" fill="none" stroke="#9d6bdc" stroke-linecap="round">
-      <path d="M1066 35 v8 m-4-4 h8" />
-      <path d="M882 221 v8 m-4-4 h8" />
-    </g>
-    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-      <text x="64" y="78" fill="#c9a6ff" font-size="12" font-weight="600" letter-spacing="3">CODE AFTER DARK</text>
-      <text x="60" y="145" fill="#f4edff" font-size="58" font-weight="750" letter-spacing="-1.5">Carlos Jarero</text>
-      <text x="64" y="184" fill="#c9a6ff" font-size="20" font-weight="500">Software Engineer · AI</text>
-      <text x="64" y="217" fill="#d4c6e5" font-size="18">Building things that haunt the web</text>
-    </g>
-    <ellipse cx="990" cy="264" rx="65" ry="7" fill="#9d6bdc" opacity=".12" />
-    <g class="phantom">
-      <!-- A folded, asymmetrical cloak with a curling crown and trailing ribbons. -->
-      <path d="M953 194 C943 219 951 232 936 249 C957 243 971 229 975 208 M989 205 C986 227 1002 238 993 254 C1017 243 1027 222 1021 201 M1034 194 C1042 217 1064 217 1071 235 C1074 211 1060 195 1050 186" fill="url(#hem)" />
-      <path d="M933 173 C923 150 929 113 948 91 C965 71 995 70 1007 53 C1015 43 1013 36 1009 32 C1045 42 1058 70 1050 92 C1073 111 1081 140 1072 163 C1065 184 1073 195 1087 202 C1069 211 1051 203 1040 195 C1034 218 1016 227 1003 213 C991 200 981 211 971 218 C956 228 939 214 939 200 C923 208 906 204 899 194 C920 194 937 188 933 173Z" fill="url(#cloak)" stroke="#c9a6ff" stroke-opacity=".4" stroke-width="1.5" />
-      <path d="M945 133 C944 110 963 89 988 84 C967 100 960 117 960 136" fill="#e1cdff" opacity=".2" />
-      <path d="M1050 100 C1041 112 1044 131 1052 146 C1065 172 1055 191 1040 195 C1062 185 1072 166 1072 148 C1071 128 1063 110 1050 100Z" fill="#3d205f" opacity=".3" />
-      <g fill="#ff468e" filter="url(#eye-glow)" opacity=".9">
-        <path d="M954 132 L980 141 L967 150Z M1004 140 L1034 126 L1022 148Z" />
+
+    <!-- The red impression sits a few pixels out of register. -->
+    <g font-family="Impact, 'Arial Narrow Bold', 'Helvetica Neue Condensed', sans-serif" font-size="171" font-weight="900" letter-spacing="-5">
+      <g fill="#8a1414" transform="translate(5 3)" aria-hidden="true">
+        <text x="43" y="181" textLength="698" lengthAdjust="spacingAndGlyphs">CARLOS</text>
+        <text x="40" y="332" textLength="806" lengthAdjust="spacingAndGlyphs">JARERO</text>
       </g>
-      <path d="M954 132 Q968 135 980 141 Q974 153 966 148Z M1004 140 Q1020 135 1034 126 L1023 147 Q1012 152 1004 140Z" fill="#291237" />
-      <path d="M958 136 L975 142 L967 146Z M1009 141 L1029 132 L1021 145Z" fill="#ff528f" />
-      <path d="M963 138 L972 142 L968 143Z M1015 140 L1025 136 L1020 142Z" fill="#ffd0e3" />
-      <path d="M975 163 Q996 178 1023 157 Q1010 188 986 177 Q980 173 975 163Z" fill="#291237" />
-      <path d="M983 168 Q1000 175 1016 164" fill="none" stroke="#e9d9ff" stroke-width="2.5" stroke-linecap="round" />
-      <path d="M1017 159 Q1023 156 1027 158" fill="none" stroke="#291237" stroke-width="2" stroke-linecap="round" />
+      <g fill="#ece6da">
+        <text x="43" y="181" textLength="698" lengthAdjust="spacingAndGlyphs">CARLOS</text>
+        <text x="40" y="332" textLength="806" lengthAdjust="spacingAndGlyphs">JARERO</text>
+      </g>
     </g>
-    <rect x=".5" y=".5" width="1199" height="299" rx="19.5" fill="none" stroke="#9d6bdc" stroke-opacity=".22" />
+
+    <!-- Dry printing scratches cross the letterforms. -->
+    <g fill="none" stroke="#0b0a0d" opacity=".48">
+      <path d="M45 147 L334 145 M442 103 L707 105 M150 276 L505 273 M588 302 L825 299" stroke-width="1.5" />
+      <path d="M254 58 L247 175 M672 216 L669 328" stroke-width="1" />
+    </g>
+    <path d="M46 361 H843" stroke="#ece6da" stroke-opacity=".4" />
+    <text x="47" y="389" fill="#ece6da" font-family="monospace" font-size="13" letter-spacing="1">VOL. 1 — SOFTWARE ENGINEER — MX</text>
+
+    <!-- One continuous line of type and a cut corner, not a certification seal. -->
+    <g transform="translate(936 352) rotate(-5)">
+      <path d="M0 0 H205 L222 17 V52 H0Z" fill="#ece6da" />
+      <path d="M9 9 V43 M15 9 V43" stroke="#8a1414" stroke-width="3" />
+      <text x="27" y="33" fill="#0b0a0d" font-family="Impact, 'Arial Narrow Bold', 'Helvetica Neue Condensed', sans-serif" font-size="23" textLength="180" lengthAdjust="spacingAndGlyphs">EXPLICIT CODE</text>
+    </g>
+    <rect width="1200" height="420" filter="url(#grain)" opacity=".33" pointer-events="none" />
   </g>
 </svg>
