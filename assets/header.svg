@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title description">
+  <title id="title">Carlos Jarero — Software Engineer · AI</title>
+  <desc id="description">Building things that haunt the web. An original mischievous purple phantom with glowing magenta eyes and a sly grin floats over a dark, starry landscape.</desc>
+  <defs>
+    <linearGradient id="night" x2="1" y2="1">
+      <stop stop-color="#0d0a14" />
+      <stop offset="1" stop-color="#1a1025" />
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop stop-color="#6b3fa0" stop-opacity=".32" />
+      <stop offset="1" stop-color="#6b3fa0" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="cloak" x1="0" y1="0" x2=".8" y2="1">
+      <stop stop-color="#c9a6ff" />
+      <stop offset=".38" stop-color="#9d6bdc" />
+      <stop offset="1" stop-color="#6b3fa0" />
+    </linearGradient>
+    <linearGradient id="hem" x2="0" y2="1">
+      <stop stop-color="#9d6bdc" stop-opacity=".65" />
+      <stop offset="1" stop-color="#9d6bdc" stop-opacity="0" />
+    </linearGradient>
+    <filter id="eye-glow" x="-80%" y="-100%" width="260%" height="300%">
+      <feGaussianBlur stdDeviation="4" />
+    </filter>
+    <clipPath id="frame">
+      <rect width="1200" height="300" rx="20" />
+    </clipPath>
+  </defs>
+  <style>
+    .phantom { animation: drift 7s ease-in-out infinite; }
+    .wisp { animation: fade 6s ease-in-out infinite; }
+    .late { animation-delay: -3s; }
+    @keyframes drift {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+    @keyframes fade {
+      0%, 100% { opacity: .25; }
+      50% { opacity: .75; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .phantom, .wisp { animation: none; }
+    }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="300" fill="url(#night)" />
+    <ellipse cx="987" cy="135" rx="250" ry="210" fill="url(#halo)" />
+    <path d="M0 268 Q180 220 360 272 T730 269 T1200 247 V300 H0Z" fill="#6b3fa0" opacity=".07" />
+    <path d="M0 284 Q230 252 450 284 T880 278 T1200 274" fill="none" stroke="#9d6bdc" stroke-opacity=".15" />
+    <g fill="#c9a6ff">
+      <circle cx="52" cy="48" r="1.5" opacity=".4" />
+      <circle cx="417" cy="35" r="1" opacity=".35" />
+      <circle cx="748" cy="61" r="1.5" opacity=".5" />
+      <circle cx="1113" cy="47" r="1.5" opacity=".5" />
+      <circle cx="1154" cy="211" r="1" opacity=".4" />
+      <circle cx="813" cy="248" r="1" opacity=".45" />
+      <circle cx="630" cy="253" r="1" opacity=".3" />
+    </g>
+    <g class="wisp" fill="none" stroke="#c9a6ff" stroke-linecap="round">
+      <path d="M844 86 v12 m-6-6 h12" />
+      <path d="M1120 144 v8 m-4-4 h8" />
+    </g>
+    <g class="wisp late" fill="none" stroke="#9d6bdc" stroke-linecap="round">
+      <path d="M1066 35 v8 m-4-4 h8" />
+      <path d="M882 221 v8 m-4-4 h8" />
+    </g>
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+      <text x="64" y="78" fill="#c9a6ff" font-size="12" font-weight="600" letter-spacing="3">CODE AFTER DARK</text>
+      <text x="60" y="145" fill="#f4edff" font-size="58" font-weight="750" letter-spacing="-1.5">Carlos Jarero</text>
+      <text x="64" y="184" fill="#c9a6ff" font-size="20" font-weight="500">Software Engineer · AI</text>
+      <text x="64" y="217" fill="#d4c6e5" font-size="18">Building things that haunt the web</text>
+    </g>
+    <ellipse cx="990" cy="264" rx="65" ry="7" fill="#9d6bdc" opacity=".12" />
+    <g class="phantom">
+      <!-- A folded, asymmetrical cloak with a curling crown and trailing ribbons. -->
+      <path d="M953 194 C943 219 951 232 936 249 C957 243 971 229 975 208 M989 205 C986 227 1002 238 993 254 C1017 243 1027 222 1021 201 M1034 194 C1042 217 1064 217 1071 235 C1074 211 1060 195 1050 186" fill="url(#hem)" />
+      <path d="M933 173 C923 150 929 113 948 91 C965 71 995 70 1007 53 C1015 43 1013 36 1009 32 C1045 42 1058 70 1050 92 C1073 111 1081 140 1072 163 C1065 184 1073 195 1087 202 C1069 211 1051 203 1040 195 C1034 218 1016 227 1003 213 C991 200 981 211 971 218 C956 228 939 214 939 200 C923 208 906 204 899 194 C920 194 937 188 933 173Z" fill="url(#cloak)" stroke="#c9a6ff" stroke-opacity=".4" stroke-width="1.5" />
+      <path d="M945 133 C944 110 963 89 988 84 C967 100 960 117 960 136" fill="#e1cdff" opacity=".2" />
+      <path d="M1050 100 C1041 112 1044 131 1052 146 C1065 172 1055 191 1040 195 C1062 185 1072 166 1072 148 C1071 128 1063 110 1050 100Z" fill="#3d205f" opacity=".3" />
+      <g fill="#ff468e" filter="url(#eye-glow)" opacity=".9">
+        <path d="M954 132 L980 141 L967 150Z M1004 140 L1034 126 L1022 148Z" />
+      </g>
+      <path d="M954 132 Q968 135 980 141 Q974 153 966 148Z M1004 140 Q1020 135 1034 126 L1023 147 Q1012 152 1004 140Z" fill="#291237" />
+      <path d="M958 136 L975 142 L967 146Z M1009 141 L1029 132 L1021 145Z" fill="#ff528f" />
+      <path d="M963 138 L972 142 L968 143Z M1015 140 L1025 136 L1020 142Z" fill="#ffd0e3" />
+      <path d="M975 163 Q996 178 1023 157 Q1010 188 986 177 Q980 173 975 163Z" fill="#291237" />
+      <path d="M983 168 Q1000 175 1016 164" fill="none" stroke="#e9d9ff" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M1017 159 Q1023 156 1027 158" fill="none" stroke="#291237" stroke-width="2" stroke-linecap="round" />
+    </g>
+    <rect x=".5" y=".5" width="1199" height="299" rx="19.5" fill="none" stroke="#9d6bdc" stroke-opacity=".22" />
+  </g>
+</svg>
