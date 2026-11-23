@@ -1,70 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title description">
-  <title id="title">Carlos Jarero — Vol. 1</title>
-  <desc id="description">An original release sleeve: oversized bone-white type with red print misregistration, purple and blood-red smoke, film grain, and a tall, torn-sheet ghost cropped by the top edge. An angled EXPLICIT CODE sticker sits at the bottom right.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-labelledby="t d">
+  <title id="t">Carlos Jarero — Software Engineer</title>
+  <desc id="d">Dark violet after-hours cover with the name Carlos Jarero on the left and an original purple ghost on the right: a floating wispy-tailed phantom with glowing red eyes and a wide mischievous grin.</desc>
   <defs>
-    <clipPath id="frame">
-      <rect width="1200" height="420" />
-    </clipPath>
-    <filter id="smoke" x="-40%" y="-60%" width="180%" height="220%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency=".009 .018" numOctaves="3" seed="18" result="haze" />
-      <feDisplacementMap in="SourceGraphic" in2="haze" scale="100" xChannelSelector="R" yChannelSelector="G" />
-      <feGaussianBlur stdDeviation="27" />
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0612"/>
+      <stop offset="0.6" stop-color="#150a2a"/>
+      <stop offset="1" stop-color="#2a1050"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8a3ff0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#8a3ff0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="body" cx="0.4" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#9a6be0"/>
+      <stop offset="0.55" stop-color="#5b2d9e"/>
+      <stop offset="1" stop-color="#2b1255"/>
+    </radialGradient>
+    <linearGradient id="ghostBody" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#8a4fd8"/>
+      <stop offset="0.55" stop-color="#5a2aa6"/>
+      <stop offset="1" stop-color="#3b1670"/>
+    </linearGradient>
+    <radialGradient id="eyeGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff2e4d" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#ff2e4d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.07 0"/>
     </filter>
-    <filter id="grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency=".79" numOctaves="3" seed="30" />
-      <feColorMatrix type="matrix" values="0 0 0 0 .82  0 0 0 0 .78  0 0 0 0 .71  0 0 0 .32 0" />
+    <filter id="mist" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
     </filter>
-    <filter id="torn-edge" x="-8%" y="-8%" width="116%" height="116%">
-      <feTurbulence type="fractalNoise" baseFrequency=".055" numOctaves="2" seed="9" result="paper" />
-      <feDisplacementMap in="SourceGraphic" in2="paper" scale="5" xChannelSelector="R" yChannelSelector="G" />
-    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
   </defs>
-  <g clip-path="url(#frame)">
-    <rect width="1200" height="420" fill="#0b0a0d" />
 
-    <!-- Diffuse ink clouds, without reflective or glossy surfaces. -->
-    <g filter="url(#smoke)" opacity=".8">
-      <animateTransform attributeName="transform" type="translate" values="0 0; -16 7; 0 0" dur="28s" repeatCount="indefinite" />
-      <path d="M390 280 C520 90 630 315 768 102 S1050 30 1190 113" fill="none" stroke="#4b1d6b" stroke-width="145" />
-      <path d="M690 435 C790 285 945 380 1020 229 S1185 154 1280 205" fill="none" stroke="#8a1414" stroke-width="105" />
-      <path d="M720 214 C867 70 976 266 1175 15" fill="none" stroke="#4b1d6b" stroke-width="45" />
-    </g>
-
-    <!-- An elongated, asymmetrical sheet: no limbs, spikes, or round torso. -->
-    <g filter="url(#torn-edge)">
-      <path d="M930-52 C1018-75 1091-19 1099 60 L1110 143 1126 228 1153 302 1118 278 1131 364 1095 328 1101 405 1075 374 1061 444 1042 424 1032 336 1012 372 1009 296 980 330 987 254 960 277 967 196 942 230 950 139 C929 81 905 18 930-52Z" fill="#b6afa4" />
-      <path d="M964-18 L989 46 979 136 994 192 974 241 987 153 966 103Z M1068 64 L1055 177 1080 284 1061 232 1044 174Z M1026 223 L1042 292 1032 336 1032 285Z" fill="#0b0a0d" opacity=".6" />
-      <path d="M972 83 L1008 103 997 121 976 114Z M1038 97 L1070 72 1063 107 1040 119Z" fill="#0b0a0d" />
-      <path d="M1018 140 L1028 135 1024 181 1015 193Z" fill="#0b0a0d" />
-      <path d="M1097 211 L1105 254 M1000 23 L1010 60 M1057 307 L1065 337" stroke="#ece6da" stroke-width="2" opacity=".35" />
-    </g>
-
-    <!-- The red impression sits a few pixels out of register. -->
-    <g font-family="Impact, 'Arial Narrow Bold', 'Helvetica Neue Condensed', sans-serif" font-size="171" font-weight="900" letter-spacing="-5">
-      <g fill="#8a1414" transform="translate(5 3)" aria-hidden="true">
-        <text x="43" y="181" textLength="698" lengthAdjust="spacingAndGlyphs">CARLOS</text>
-        <text x="40" y="332" textLength="806" lengthAdjust="spacingAndGlyphs">JARERO</text>
-      </g>
-      <g fill="#ece6da">
-        <text x="43" y="181" textLength="698" lengthAdjust="spacingAndGlyphs">CARLOS</text>
-        <text x="40" y="332" textLength="806" lengthAdjust="spacingAndGlyphs">JARERO</text>
-      </g>
-    </g>
-
-    <!-- Dry printing scratches cross the letterforms. -->
-    <g fill="none" stroke="#0b0a0d" opacity=".48">
-      <path d="M45 147 L334 145 M442 103 L707 105 M150 276 L505 273 M588 302 L825 299" stroke-width="1.5" />
-      <path d="M254 58 L247 175 M672 216 L669 328" stroke-width="1" />
-    </g>
-    <path d="M46 361 H843" stroke="#ece6da" stroke-opacity=".4" />
-    <text x="47" y="389" fill="#ece6da" font-family="monospace" font-size="13" letter-spacing="1">VOL. 1 — SOFTWARE ENGINEER — MX</text>
-
-    <!-- One continuous line of type and a cut corner, not a certification seal. -->
-    <g transform="translate(936 352) rotate(-5)">
-      <path d="M0 0 H205 L222 17 V52 H0Z" fill="#ece6da" />
-      <path d="M9 9 V43 M15 9 V43" stroke="#8a1414" stroke-width="3" />
-      <text x="27" y="33" fill="#0b0a0d" font-family="Impact, 'Arial Narrow Bold', 'Helvetica Neue Condensed', sans-serif" font-size="23" textLength="180" lengthAdjust="spacingAndGlyphs">EXPLICIT CODE</text>
-    </g>
-    <rect width="1200" height="420" filter="url(#grain)" opacity=".33" pointer-events="none" />
+  <rect width="1200" height="440" fill="url(#bg)"/>
+  <circle cx="900" cy="230" r="260" fill="url(#glow)"/>
+  <g filter="url(#mist)" opacity="0.5">
+    <ellipse cx="250" cy="400" rx="330" ry="34" fill="#5a2aa0"/>
+    <ellipse cx="760" cy="60" rx="260" ry="26" fill="#3b1a70"/>
+    <ellipse cx="1000" cy="420" rx="260" ry="30" fill="#6a30c0"/>
   </g>
+
+  <!-- Name -->
+  <text x="68" y="78" font-family="'Courier New', monospace" font-size="16" letter-spacing="4" fill="#cdb8f5">AFTER HOURS</text>
+  <g font-family="Impact, 'Arial Black', 'Helvetica Neue', Arial, sans-serif" fill="#f3ecff" font-weight="900" font-size="104">
+    <text x="64" y="205" textLength="480" lengthAdjust="spacingAndGlyphs">CARLOS</text>
+    <text x="64" y="305" textLength="480" lengthAdjust="spacingAndGlyphs">JARERO</text>
+  </g>
+  <rect x="68" y="326" width="120" height="5" fill="#b24bff"/>
+  <g font-family="'Courier New', monospace" font-size="16" letter-spacing="2" fill="#cdb8f5">
+    <text x="68" y="360" textLength="390" lengthAdjust="spacingAndGlyphs">SOFTWARE ENGINEER</text>
+    <text x="68" y="391" textLength="390" lengthAdjust="spacingAndGlyphs">AI &amp; CREATIVE TOOLS</text>
+  </g>
+
+  <g id="ghost">
+    <!-- floor shadow -->
+    <ellipse cx="900" cy="415" rx="130" ry="13" fill="#000" opacity="0.45" filter="url(#mist)"/>
+    <!-- halo -->
+    <ellipse cx="920" cy="200" rx="170" ry="190" fill="#8a3ff0" opacity="0.25" filter="url(#mist)"/>
+    <!-- body: rounded head tapering to a ragged tail toward lower-left -->
+    <path d="M920 48 C1000 48 1052 108 1052 185 C1052 250 1030 290 980 322 C940 346 900 350 860 378 C850 386 838 392 826 388 C846 372 850 356 836 350 C822 366 808 372 792 366 C810 350 812 330 800 322 C786 336 770 338 758 332 C778 316 786 290 790 260 C790 230 780 210 782 180 C786 100 840 48 920 48 Z" fill="url(#ghostBody)"/>
+    <!-- shade on the right side -->
+    <path d="M1052 185 C1052 250 1030 290 980 322 C940 346 905 350 870 372 C960 330 1010 270 1020 190 C1022 130 990 80 950 60 C1010 70 1052 120 1052 185 Z" fill="#2b1255" opacity="0.45"/>
+    <!-- short wispy arms -->
+    <path d="M792 215 C760 220 742 240 735 262 C756 252 768 258 774 270 C782 262 790 255 796 250 Z" fill="#6a38b8"/>
+    <path d="M1048 205 C1075 212 1092 232 1098 256 C1080 248 1068 252 1062 264 C1056 254 1050 248 1044 244 Z" fill="#4a2290"/>
+    <!-- eye glow -->
+    <circle cx="880" cy="150" r="30" fill="url(#eyeGlow)"/>
+    <circle cx="980" cy="150" r="30" fill="url(#eyeGlow)"/>
+    <!-- eyes: slightly slanted -->
+    <ellipse cx="880" cy="150" rx="15" ry="9" fill="#ff2e4d" transform="rotate(-14 880 150)"/>
+    <ellipse cx="980" cy="150" rx="15" ry="9" fill="#ff2e4d" transform="rotate(14 980 150)"/>
+    <ellipse cx="882" cy="148" rx="5" ry="3" fill="#ffd0d8" transform="rotate(-14 882 148)"/>
+    <ellipse cx="978" cy="148" rx="5" ry="3" fill="#ffd0d8" transform="rotate(14 978 148)"/>
+    <!-- mischievous crescent grin -->
+    <path d="M848 192 Q930 285 1012 192 Q930 218 848 192 Z" fill="#12061f"/>
+    <path d="M868 197 L876 211 L884 201 Z M893 202 L901 217 L909 205 Z M921 205 L930 220 L939 205 Z M951 205 L959 217 L967 202 Z M976 201 L984 211 L992 197 Z" fill="#f3ecff" opacity="0.92"/>
+  </g>
+
+  <rect width="1200" height="440" filter="url(#grain)"/>
 </svg>
