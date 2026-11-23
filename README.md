@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" alt="Carlos Jarero, Software Engineer. Name in white lettering on a dark violet night background, next to an original purple ghost with glowing red eyes, a mischievous grin and a wispy tail." width="100%" />
+  <img src="assets/header.svg" alt="Carlos Jarero, Software Engineer. Name in white lettering on a dark violet night background, next to Titi, a pale lavender ghost with two dark rectangular eyes and short arms." width="100%" />
 </p>
 
 <p align="center">
